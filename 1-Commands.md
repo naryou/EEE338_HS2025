@@ -44,8 +44,6 @@ All command should work as the same.
      $ cd -
     ```
 
-- Want multple windows/panes open at the same time? Try using iTerm2 (you have to download from the internet) or try using something called `tmux` (google it!).
-
 * * *
 
 ### `man` pages
@@ -101,7 +99,7 @@ Not only understanding how the files should be formatted, but also knowing how t
    $ command1 input.txt > output.txt
    ```
 
-3. `>>`: Overwrite any file of the same name every time you run the command.
+3. `>>`: append to any file of the same name every time you run the command.
 
    ```bash
    $ command1 input2.txt >> output.txt
