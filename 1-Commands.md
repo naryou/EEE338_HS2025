@@ -429,6 +429,7 @@ $ echo "12 10 11 12 12 11" | tr ' ' '\n' | sort | uniq -c
 ```
 
 * * *
+
 ### Permissions and changing permissions
 
 ```
@@ -437,6 +438,24 @@ chmod 600 file
 ```
 
 Please read the PDF presentation for more info
+
+* * *
+
+### Copy to and from the server
+
+On the server copy file to the home (~) directory
+$	cp file ~
+
+Then on your computer, copy file from server to your computer
+$	scp your_name@fgcz-c-047.uzh.ch:~/file .
+
+
+To copy file from your computer to server:
+
+$	scp ./file your_name@fgcz-c-047.uzh.ch:~ 
+
+* * *
+
 
 * * *
 
