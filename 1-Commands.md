@@ -429,4 +429,14 @@ $ echo "12 10 11 12 12 11" | tr ' ' '\n' | sort | uniq -c
 ```
 
 * * *
+### Permissions and changing permissions
+
+```
+chmod 775 file
+chmod 600 file
+```
+
+Please read the PDF presentation for more info
+
+* * *
 
