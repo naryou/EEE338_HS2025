@@ -1,4 +1,4 @@
-# Answers of Excercises: Command line
+# Answers of Exercises: Command line
 
 ## Question 1: See if the symbolic link of Ahal.gff exists in your directory (if not, see the code below)
 
