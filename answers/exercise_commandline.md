@@ -3,8 +3,8 @@
 ## Question 1: See if the symbolic link of Ahal.gff exists in your directory (if not, see the code below)
 
 ```bash
-$ cd /scratch/bio373_2023/YOUR_DIRECTORY
-$ ln -s /scratch/bio373_2023/data/CommandLine/Ahal.gff
+$ cd /scratch/EEE338_2025/YOUR_DIRECTORY
+$ ln -s /scratch/EEE338_2025/data/CommandLine/Ahal.gff
 $ ls
 Ahal.gff
 $
