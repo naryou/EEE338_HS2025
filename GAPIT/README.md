@@ -4,7 +4,11 @@
 
 Clean up a workplace first.
 ```
-lapply(paste('package:',names(sessionInfo()$otherPkgs),sep=""),detach,character.only=TRUE,unload=TRUE)
+# Detach all non-base packages
+pkgs <- paste("package:", names(sessionInfo()$otherPkgs), sep = "")
+if (length(pkgs) > 0) {
+  invisible(lapply(pkgs, detach, character.only = TRUE, unload = TRUE))
+}
 
 rm(list=ls())
 ```
