@@ -1,5 +1,9 @@
 # GWAS/GS exercise using GAPIT
 
+## 0. start RStudio 
+
+on your computer or at [FGCZ](https://fgcz-genomics.uzh.ch)
+
 ## 1. Setup and load packages
 
 Clean up a workplace first.
