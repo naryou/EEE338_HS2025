@@ -124,3 +124,34 @@ If at least one sample fails the G_filter, a semicolon-separated list of codes f
 i.g. chr2:8248 failed the filter named "QD".
 
 ![Filtered](https://user-images.githubusercontent.com/58171601/135255461-3cba16e7-2269-4585-9ff9-3eae3068549f.png)
+
+
+## Filters explained
+-filter "QD < 2.0" --filter-name "QD"
+QD = Quality by Depth = variant confidence (QUAL) / unfiltered depth of non-ref samples.
+Low QD suggests the variant has a high quality score just because of high depth, not because it’s truly reliable.
+Threshold: < 2.0 → mark variants with poor quality normalized by depth.
+
+
+-filter "MQ < 30.0" --filter-name "MQ"
+MQ = RMS Mapping Quality of reads supporting the variant.
+Reflects how well reads are aligned at that position.
+Threshold: < 30.0 (Phred-scaled, so ≈ 1/1000 error chance).
+Marks variants supported by poorly mapped reads.
+
+
+-filter "MQRankSum < -15.0" --filter-name "MQRankSum"
+MQRankSum = Mapping Quality Rank Sum Test.
+Compares mapping quality of reads supporting the ref allele vs. alt allele.
+Negative values mean alt-supporting reads have worse mapping quality.
+Threshold: < -15.0 → strong evidence that the alt allele is supported by lower-quality reads.
+
+
+-filter "GQ < 20 || DP == 0" --filter-name "GQ"
+GQ = Genotype Quality per sample, Phred-scaled probability the genotype call is wrong.
+< 20 → >1% chance of being wrong (not very confident).
+DP = Depth (coverage).
+DP == 0 means no reads actually support the genotype.
+This filter marks genotypes with low confidence or no data.
+
+
