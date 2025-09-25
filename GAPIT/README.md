@@ -21,7 +21,7 @@ Load GAPIT source code and its dependency. Wait ca. 15 min. to install everythin
 Some packages are not installed but they are negligible.  
 ```
 install.packages("devtools")
-BiocManager::install("snpStats")
+# BiocManager::install("snpStats") # It is installed on the system. You don't need to install it.
 devtools::install_github("SFUStatgen/LDheatmap")
 devtools::install_github("jiabowang/GAPIT3@078fe28",force=TRUE) # install ver Aug. 2022
 library(GAPIT3) # load GAPIT3 package
